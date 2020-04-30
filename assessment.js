@@ -13,7 +13,7 @@ function removeAllChildren(element){
 assessmentButton.onclick = () => {
     const userName = userNameInput.value;
     //名前が空のときは処理を終了
-    if(userName.length == 0){
+    if(userName.length === 0){
         return;
     }
     console.log(userName);
@@ -48,7 +48,7 @@ assessmentButton.onclick = () => {
   };
 
   userNameInput.onkeydown = (event) =>{
-      if(event.key == 'Enter'){
+      if(event.key === 'Enter'){
           assessmentButton.onclick();
       }
   };
@@ -89,7 +89,7 @@ function assessment(userName) {
     return result;
   }
 console.assert(
-      assessment('優太') == '優太のいいところは知識です。博識な優太を多くの人が頼りにしています。',
+      assessment('優太') === '優太のいいところは知識です。博識な優太を多くの人が頼りにしています。',
       '診断結果の文言の特定の部分を名前に置き換える処理が正しくありません。'
 );
 console.assert(
