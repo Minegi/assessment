@@ -48,7 +48,12 @@ assessmentButton.onclick = () => {
   script.setAttribute('src', 'https://platform.twitter.com/widgets.js');
   tweetDivided.appendChild(script);
 };
-
+  // エンターキーが押されたら処理を実行
+  userNameInput.onkeydown = (event) =>{
+      if(event.key == 'Enter'){
+          assessmentButton.onclick();
+      }
+  };
 const answers = [
   '{userName}のいいところは声です。{userName}の特徴的な声はみなを惹きつけ、心に残ります。',
   '{userName}のいいところはまなざしです。{userName}に見つめられた人は、気になって仕方がないでしょう。',
